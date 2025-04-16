@@ -1,71 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Achik Ahmed | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background: #111;
-      color: #fff;
-    }
-    img {
-      border-radius: 50%;
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border: 3px solid #fff;
-    }
-    h1 {
-      margin: 10px 0 5px;
-    }
-    .section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      color: #222;
-      margin-bottom: 10px;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    ul {
-      line-height: 1.8;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #aaa;
-      font-size: 14px;
-    }
+    :root {
+      --primary-color: #007acc;
+      --dark-bg: #111;
+      --light-bg: #f9f9f9;
+      --text-color: #333;
+    }* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: var(--light-bg);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: var(--dark-bg);
+  color: white;
+  animation: fadeInDown 1.2s ease;
+}
+
+img {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+h1 {
+  margin: 15px 0 5px;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 30px;
+  animation: fadeInUp 1s ease;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 10px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+ul {
+  line-height: 1.8;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.project-list li {
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--dark-bg);
+  color: #aaa;
+  font-size: 14px;
+  animation: fadeIn 1.5s ease;
+}
+
+.social-footer {
+  background: #222;
+  padding: 30px 0 10px;
+}
+
+.social-footer h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: var(--primary-color);
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #005fa3;
+}
+
   </style>
 </head>
 <body>
   <header>
     <img src="https://raw.githubusercontent.com/Achik-Ahmed/achik-ahmed.github.io/main/achik-ahmed.png" alt="Achik Ahmed">
     <h1>Achik Ahmed</h1>
-    <p>WordPress & Linux Developer | Founder – TermuxCommands.com</p>
-  </header>
-
-  <section class="section">
+    <p>WordPress & Linux Developer | SEO Expert | Founder - achik.us </p>
+  </header>  <section class="section">
     <h2>About Me</h2>
-    <p>I'm a developer from Guwahati with a strong interest in Linux, Termux, and WordPress development. I love building tools that simplify tech and sharing tutorials through my blogs and social media.</p>
-  </section>
-
-  <section class="section">
+    <p>I'm Achik Ahmed from Guwahati, Assam. I'm passionate about Linux and web designing, and I enjoy exploring new technologies and building practical solutions. Currently, I'm completing my graduation under Guwahati University.</p>
+    <p>My love for tech has led me to gain hands-on experience in Search Engine Optimization (SEO) and website development. Over the years, I've developed multiple websites, combining both technical skill and creative design to deliver fast, functional, and SEO-friendly web experiences.</p>
+    <a href="#contact" class="button">Contact Me</a>
+  </section>  <section class="section">
     <h2>Skills</h2>
     <ul>
       <li>Linux & Termux</li>
@@ -75,25 +159,25 @@
       <li>Git & GitHub</li>
       <li>Content Creation</li>
     </ul>
-  </section>
-
-  <section class="section">
+  </section>  <section class="section">
     <h2>Projects</h2>
-    <ul>
+    <ul class="project-list">
       <li><strong>TermuxCommands.com</strong> – Tutorials and tools for Termux users</li>
-      <li><strong>IG OSINT Tool</strong> – Info gathering tool for Instagram (<a href="https://github.com/Achik-Ahmed/IG-OSINT-V2" target="_blank">GitHub</a>)</li>
-      <li><strong>IP Tracer</strong> – IP lookup tool using Termux (<a href="https://github.com/Achik-Ahmed/IP-Tracer" target="_blank">GitHub</a>)</li>
+      <li><strong>IG OSINT Tool</strong> – Info gathering tool for Instagram (<a href="https://github.com/Achik-Ahmed/IG-OSINT-V2" target="_blank">View on GitHub</a>)</li>
+      <li><strong>IP Tracer</strong> – IP lookup tool using Termux (<a href="https://github.com/Achik-Ahmed/IP-Tracer" target="_blank">View on GitHub</a>)</li>
     </ul>
-  </section>
-
-  <section class="section">
+  </section>  <section class="section" id="contact">
     <h2>Contact</h2>
-    <p>Email: you@example.com</p>
-    <p>Instagram: <a href="https://instagram.com/lil_zanny20" target="_blank">@lil_zanny20</a></p>
-    <p>GitHub: <a href="https://github.com/Achik-Ahmed" target="_blank">github.com/Achik-Ahmed</a></p>
-  </section>
-
-  <footer>
+    <p>For any business-related inquiries, feel free to reach out to me via my official email:</p>
+    <p>Email: <a href="mailto:achikahmed.info@gmail.com">achikahmed.info@gmail.com</a></p>
+  </section>  <div class="social-footer">
+    <h3>Connect with me</h3>
+    <div class="social-icons">
+      <a href="https://instagram.com/lil_zanny20" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/Achik-Ahmed" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="mailto:achikahmed.info@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>  <footer>
     &copy; 2025 Achik Ahmed. All rights reserved.
   </footer>
 </body>
