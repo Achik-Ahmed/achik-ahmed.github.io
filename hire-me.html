@@ -13,7 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* COPIED FROM PORTFOLIO STYLES */
     :root {
       --primary-color: #007acc;
       --dark-bg: #111;
@@ -39,6 +38,34 @@
       background: var(--dark-bg);
       color: white;
       animation: fadeInDown 1.2s ease;
+      position: relative;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .nav-btn:hover {
+      background: var(--primary-color);
+    }
+
+    .nav-btn.active {
+      background: var(--primary-color);
     }
 
     img {
@@ -93,38 +120,6 @@
       background: #005fa3;
     }
 
-    /* Navigation Styles */
-    nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      font-weight: 500;
-      padding: 5px 10px;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    nav a.active {
-      background: var(--primary-color);
-    }
-
     /* Services Section */
     .services-list {
       list-style-type: none;
@@ -167,7 +162,7 @@
       width: 25px;
     }
 
-    /* Footer (COPIED FROM PORTFOLIO) */
+    /* Footer */
     .main-footer {
       background: #111;
       color: #ccc;
@@ -227,13 +222,10 @@
 </head>
 <body>
   <header>
-    <nav>
-      <h1>Achik Ahmed</h1>
-      <ul>
-        <li><a href="index.html">Portfolio</a></li>
-        <li><a href="hire-me.html" class="active">Hire Me</a></li>
-      </ul>
-    </nav>
+    <div class="nav-buttons">
+      <a href="index.html" class="nav-btn">Portfolio</a>
+      <a href="hire-me.html" class="nav-btn active">Hire Me</a>
+    </div>
     <img src="https://raw.githubusercontent.com/Achik-Ahmed/achik-ahmed.github.io/main/achik-ahmed.png" alt="Achik Ahmed">
     <h1>Hire Me</h1>
     <p>WordPress & Linux Developer | SEO Expert | Founder - achik.us</p>
