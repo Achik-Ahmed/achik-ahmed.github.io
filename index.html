@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Metadata -->
   <title>Achik Ahmed | Portfolio</title>
   <meta name="description" content="Achik Ahmed's portfolio: Linux, WordPress, SEO, and Web Projects from Guwahati, Assam.">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Achik Ahmed | Portfolio">
   <meta property="og:description" content="WordPress | Linux | SEO ">
   <meta property="og:image" content="https://raw.githubusercontent.com/Achik-Ahmed/achik-ahmed.github.io/main/achik-ahmed-portfolio.png">
@@ -13,7 +10,6 @@
   <meta property="og:type" content="website">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Achik Ahmed | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
@@ -23,7 +19,7 @@
       --light-bg: #f9f9f9;
       --text-color: #333;
     }
-    
+
     * {
       box-sizing: border-box;
     }
@@ -77,17 +73,9 @@
       color: #111;
     }
 
-    ul {
-      line-height: 1.8;
-    }
-
     a {
       color: var(--primary-color);
       text-decoration: none;
-    }
-
-    .project-list li {
-      margin-bottom: 10px;
     }
 
     .button {
@@ -112,10 +100,6 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       border-radius: 8px;
       display: inline-block;
-    }
-
-    .contact-box p {
-      margin: 0;
     }
 
     .main-footer {
@@ -167,31 +151,40 @@
     /* Skills Section Styles */
     .skills-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       margin-top: 20px;
     }
 
     .skill-card {
       background: white;
-      padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      color: #111;
+      font-size: 1rem;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      gap: 15px;
+      height: 200px; /* Fixed height for square shape */
+      width: 200px;  /* Square shape */
+      margin: 0 auto;
     }
 
     .skill-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     }
 
     .skill-icon {
-      font-size: 1.8rem;
+      font-size: 2.5rem;
       color: var(--primary-color);
-      width: 40px;
-      text-align: center;
+      margin-bottom: 10px;
     }
 
     .skill-card h3 {
@@ -208,6 +201,18 @@
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .skills-container {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -229,44 +234,27 @@
     <h2>Skills</h2>
     <div class="skills-container">
       <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fab fa-linux"></i>
-        </div>
+        <div class="skill-icon"><i class="fab fa-linux"></i></div>
         <h3>Linux & Termux</h3>
       </div>
-      
       <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fab fa-wordpress"></i>
-        </div>
+        <div class="skill-icon"><i class="fab fa-wordpress"></i></div>
         <h3>WordPress Development</h3>
       </div>
-      
       <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fas fa-code"></i>
-        </div>
+        <div class="skill-icon"><i class="fas fa-code"></i></div>
         <h3>HTML, CSS, JavaScript</h3>
       </div>
-      
       <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fas fa-search"></i>
-        </div>
+        <div class="skill-icon"><i class="fas fa-search"></i></div>
         <h3>SEO & Blogging</h3>
       </div>
-      
       <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fab fa-github"></i>
-        </div>
+        <div class="skill-icon"><i class="fab fa-github"></i></div>
         <h3>Git & GitHub</h3>
       </div>
-      
       <div class="skill-card">
-        <div class="skill-icon">
-          <i class="fas fa-pen-fancy"></i>
-        </div>
+        <div class="skill-icon"><i class="fas fa-pen-fancy"></i></div>
         <h3>Content Creation</h3>
       </div>
     </div>
