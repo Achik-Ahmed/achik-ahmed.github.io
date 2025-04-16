@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,174 +11,167 @@
       --dark-bg: #111;
       --light-bg: #f9f9f9;
       --text-color: #333;
-    }
+    }* {
+  box-sizing: border-box;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: var(--light-bg);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: var(--light-bg);
-      color: var(--text-color);
-      scroll-behavior: smooth;
-    }
+header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: var(--dark-bg);
+  color: white;
+  animation: fadeInDown 1.2s ease;
+}
 
-    header {
-      text-align: center;
-      padding: 60px 20px 40px;
-      background: var(--dark-bg);
-      color: white;
-      animation: fadeInDown 1.2s ease;
-    }
+img {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
 
-    img {
-      border-radius: 50%;
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border: 3px solid white;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    }
+h1 {
+  margin: 15px 0 5px;
+  font-size: 2rem;
+}
 
-    h1 {
-      margin: 15px 0 5px;
-      font-size: 2rem;
-    }
+p {
+  font-size: 1rem;
+}
 
-    p {
-      font-size: 1rem;
-    }
+.section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 30px;
+  animation: fadeInUp 1s ease;
+}
 
-    .section {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 30px;
-      animation: fadeInUp 1s ease;
-    }
+h2 {
+  font-size: 1.6rem;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 10px;
+  margin-bottom: 15px;
+  color: #111;
+}
 
-    h2 {
-      font-size: 1.6rem;
-      border-left: 4px solid var(--primary-color);
-      padding-left: 10px;
-      margin-bottom: 15px;
-      color: #111;
-    }
+ul {
+  line-height: 1.8;
+}
 
-    ul {
-      line-height: 1.8;
-    }
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
 
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-    }
+.project-list li {
+  margin-bottom: 10px;
+}
 
-    .project-list li {
-      margin-bottom: 10px;
-    }
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: var(--primary-color);
-      color: white;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
+.button:hover {
+  background: #005fa3;
+}
 
-    .button:hover {
-      background: #005fa3;
-    }
+.contact-box {
+  background: white;
+  border-left: 4px solid var(--primary-color);
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
 
-    .contact-box {
-      background: white;
-      border-left: 4px solid var(--primary-color);
-      padding: 20px;
-      margin-top: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-radius: 8px;
-    }
+.contact-box p {
+  margin: 5px 0;
+}
 
-    .contact-box p {
-      margin: 5px 0;
-    }
+.main-footer {
+  background: #111;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  text-align: center;
+  animation: fadeInUp 1.5s ease;
+}
 
-    .main-footer {
-      background: #111;
-      color: #ccc;
-      padding: 40px 20px 20px;
-      text-align: center;
-      animation: fadeInUp 1.5s ease;
-    }
+.footer-content h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
 
-    .footer-content h3 {
-      color: #fff;
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
+.footer-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
 
-    .footer-content p {
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
 
-    .footer-social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
+.footer-social-icons a {
+  color: #ccc;
+  font-size: 22px;
+  transition: color 0.3s, transform 0.3s;
+}
 
-    .footer-social-icons a {
-      color: #ccc;
-      font-size: 22px;
-      transition: color 0.3s, transform 0.3s;
-    }
+.footer-social-icons a:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
 
-    .footer-social-icons a:hover {
-      color: var(--primary-color);
-      transform: scale(1.2);
-    }
+.footer-bottom {
+  font-size: 14px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  margin-top: 10px;
+  color: #888;
+}
 
-    .footer-bottom {
-      font-size: 14px;
-      border-top: 1px solid #333;
-      padding-top: 10px;
-      margin-top: 10px;
-      color: #888;
-    }
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
-<body>
-
-  <header>
+<body>  <header>
     <img src="https://raw.githubusercontent.com/Achik-Ahmed/achik-ahmed.github.io/main/achik-ahmed.png" alt="Achik Ahmed">
     <h1>Achik Ahmed</h1>
     <p>WordPress & Linux Developer | SEO Expert | Founder - achik.us</p>
-  </header>
-
-  <section class="section">
+  </header>  <section class="section">
     <h2>About Me</h2>
     <p>Hi, I'm Achik Ahmed from Guwahati, Assam. I'm passionate about Linux and web designing, and I enjoy exploring new technologies and building practical solutions. Currently, I'm completing my graduation under Guwahati University.</p>
     <p>My love for tech has led me to gain hands-on experience in Search Engine Optimization (SEO) and website development. Over the years, I've developed multiple websites, combining both technical skill and creative design to deliver fast, functional, and SEO-friendly web experiences.</p>
     <a href="#contact" class="button">Contact Me</a>
-  </section>
-
-  <section class="section">
+  </section>  <section class="section">
     <h2>Skills</h2>
     <ul>
       <li>Linux & Termux</li>
@@ -189,35 +181,29 @@
       <li>Git & GitHub</li>
       <li>Content Creation</li>
     </ul>
-  </section>
-
-  <section class="section">
+  </section>  <section class="section">
     <h2>Projects</h2>
     <ul class="project-list">
       <li><strong>TermuxCommands.com</strong> – Tutorials and tools for Termux users</li>
       <li><strong>IG OSINT Tool</strong> – Info gathering tool for Instagram (<a href="https://github.com/Achik-Ahmed/IG-OSINT-V2" target="_blank">View on GitHub</a>)</li>
-      <li><strong>IP Tracer</strong> – IP lookup tool using Termux (<a href="https://github.com/Achik-Ahmed/IP-Tracer" target="_blank">View on GitHub</a>)</li>
+      <li><strong>IP Tracer</strong> – IP lookup tool (<a href="https://github.com/Achik-Ahmed/IP-Tracer" target="_blank">View on GitHub</a>)</li>
     </ul>
-  </section>
-
-  <section class="section" id="contact">
+  </section>  <section class="section" id="contact">
     <h2>Contact</h2>
     <div class="contact-box">
       <p>For any business-related inquiries, feel free to reach out to me:</p>
       <p>Email: <a href="mailto:achikahmed.info@gmail.com">achikahmed.info@gmail.com</a></p>
     </div>
-  </section>
-
-  <footer class="main-footer">
+  </section>  <footer class="main-footer">
     <div class="footer-content">
       <h3>Let's Connect</h3>
       <p>Feel free to reach out through any of these platforms:</p>
       <div class="footer-social-icons">
-        <a href="https://instagram.com/lil_zanny20" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/lil_zanny_1510" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://github.com/Achik-Ahmed" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://facebook.com/achik.ahmed" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.facebook.com/share/1YYdWVGZ3G/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
         <a href="https://www.linkedin.com/in/achik-ahmed" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com/achik_ahmed" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://x.com/AchikAhmed6" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
         <a href="https://www.youtube.com/@TermuxCommands" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
         <a href="mailto:achikahmed.info@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
       </div>
@@ -225,7 +211,5 @@
     <div class="footer-bottom">
       <p>&copy; 2025 Achik Ahmed | Built with passion in Guwahati.</p>
     </div>
-  </footer>
-
-</body>
+  </footer></body>
 </html>
