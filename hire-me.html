@@ -38,34 +38,6 @@
       background: var(--dark-bg);
       color: white;
       animation: fadeInDown 1.2s ease;
-      position: relative;
-    }
-
-    .nav-buttons {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      display: flex;
-      gap: 10px;
-    }
-
-    .nav-btn {
-      padding: 8px 16px;
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-      border-radius: 5px;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-    }
-
-    .nav-btn:hover {
-      background: var(--primary-color);
-    }
-
-    .nav-btn.active {
-      background: var(--primary-color);
     }
 
     img {
@@ -118,6 +90,39 @@
 
     .button:hover {
       background: #005fa3;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      max-width: 900px;
+      margin: 0 auto 30px;
+      padding: 0 30px;
+      font-size: 0.9rem;
+    }
+
+    .breadcrumbs a {
+      color: var(--primary-color);
+      transition: opacity 0.3s;
+    }
+
+    .breadcrumbs a:hover {
+      opacity: 0.8;
+    }
+
+    .breadcrumbs span {
+      color: #777;
+      margin: 0 5px;
+    }
+
+    /* Back to Portfolio Link */
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+
+    .back-link i {
+      margin-right: 5px;
     }
 
     /* Services Section */
@@ -222,14 +227,16 @@
 </head>
 <body>
   <header>
-    <div class="nav-buttons">
-      <a href="index.html" class="nav-btn">Portfolio</a>
-      <a href="hire-me.html" class="nav-btn active">Hire Me</a>
-    </div>
     <img src="https://raw.githubusercontent.com/Achik-Ahmed/achik-ahmed.github.io/main/achik-ahmed.png" alt="Achik Ahmed">
     <h1>Hire Me</h1>
     <p>WordPress & Linux Developer | SEO Expert | Founder - achik.us</p>
   </header>
+
+  <div class="breadcrumbs">
+    <a href="index.html">Portfolio</a>
+    <span>/</span>
+    <span>Hire Me</span>
+  </div>
 
   <section class="section">
     <h2>Services Offered</h2>
@@ -241,6 +248,10 @@
       <li><strong>Content Writing</strong> – High-quality, SEO-friendly articles and tutorials.</li>
       <li><strong>Partnership</strong> – Open to business collabs, co-projects, and tech-based ventures.</li>
     </ul>
+
+    <a href="index.html" class="back-link">
+      <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
   </section>
 
   <section class="section">
