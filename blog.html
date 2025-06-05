@@ -8,19 +8,37 @@
   <link rel="manifest" href="/favicon/site.webmanifest">
   <link rel="canonical" href="https://achik-ahmed.github.io/blog.html">
   <title>Visit My Blog – Achik.us</title>
-  <meta name="description" content="Visit Achik Ahmed's tech blog – Achik.us for Termux, Linux, Android tips, and more.">
+  <meta name="description" content="Achik Ahmed's official blog website for tutorials, tools, and tech tips.">
   <meta property="og:title" content="Visit My Blog – Achik.us">
-  <meta property="og:description" content="Explore tutorials, tools, and guides on Termux, Linux, and Android.">
+  <meta property="og:description" content="Explore Linux, Termux, SEO, and Tech tutorials on my blog website.">
   <meta property="og:image" content="https://raw.githubusercontent.com/Achik-Ahmed/achik-ahmed.github.io/main/achik-ahmed-portfolio.png">
-  <meta property="og:url" content="https://achik-ahmed.github.io/blog.html">
-  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.achik.us">
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* Copy your existing CSS here — keeping everything as-is */
-    /* (Same <style> content from your main index.html for consistent design) */
+    :root{--primary-color:#007acc;--dark-bg:#111;--light-bg:#f9f9f9;--text-color:#333}
+    *{box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;margin:0;background:var(--light-bg);color:var(--text-color);scroll-behavior:smooth}
+    header{text-align:center;padding:60px 20px 40px;background:var(--dark-bg);color:white;animation:fadeInDown 1.2s ease}
+    img{border-radius:50%;width:140px;height:140px;object-fit:cover;border:3px solid white;box-shadow:0 4px 15px rgba(0,0,0,0.4)}
+    h1{margin:15px 0 5px;font-size:2rem}
+    p{font-size:1rem}
+    .section{max-width:900px;margin:60px auto;padding:0 30px;animation:fadeInUp 1s ease}
+    h2{font-size:1.6rem;border-left:4px solid var(--primary-color);padding-left:10px;margin-bottom:15px;color:#111}
+    a{color:var(--primary-color);text-decoration:none}
+    .button{display:inline-block;margin-top:10px;padding:10px 20px;background:var(--primary-color);color:white;border-radius:5px;transition:background 0.3s ease}
+    .button:hover{background:#005fa3}
+    .main-footer{background:#111;color:#ccc;padding:40px 20px 20px;text-align:center;animation:fadeInUp 1.5s ease}
+    .footer-content h3{color:#fff;font-size:1.5rem;margin-bottom:10px}
+    .footer-content p{font-size:1rem;margin-bottom:20px}
+    .footer-social-icons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+    .footer-social-icons a{color:#ccc;font-size:22px;transition:color 0.3s,transform 0.3s}
+    .footer-social-icons a:hover{color:var(--primary-color);transform:scale(1.2)}
+    .footer-bottom{font-size:14px;border-top:1px solid #333;padding-top:10px;margin-top:10px;color:#888}
+    @keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
   </style>
 </head>
 <body>
@@ -28,17 +46,13 @@
 <header>
   <img src="https://raw.githubusercontent.com/Achik-Ahmed/achik-ahmed.github.io/main/achik-ahmed.png" alt="Achik Ahmed">
   <h1>Achik Ahmed</h1>
-  <p>WordPress & Linux Developer | SEO Expert | Founder - 
-    <a href="https://www.achik.us" target="_blank" rel="dofollow">achik.us</a>
-  </p>
+  <p>WordPress & Linux Developer | SEO Expert | Founder - <a href="https://www.achik.us" target="_blank" rel="dofollow">achik.us</a></p>
 </header>
 
 <section class="section">
   <h2>Check Out My Blog</h2>
-  <p>
-    Visit my blog website <a href="https://www.achik.us" target="_blank" rel="dofollow">https://www.achik.us</a> to explore tutorials, tips, tools, and in-depth content on topics like Termux, Linux, Android customization, SEO, and more.
-  </p>
-  <a class="button" href="https://www.achik.us" target="_blank" rel="dofollow">Go to Blog</a>
+  <p>Looking for tutorials on Termux, Linux, SEO, and Android tools? Visit my official blog for in-depth articles, practical tips, and helpful tools for tech enthusiasts.</p>
+  <a class="button" href="https://www.achik.us" target="_blank" rel="dofollow">Visit achik.us</a>
 </section>
 
 <footer class="main-footer">
@@ -50,10 +64,11 @@
       <a href="https://github.com/Achik-Ahmed" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://www.facebook.com/share/1YYdWVGZ3G/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
       <a href="https://www.linkedin.com/in/achik-ahmed" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://x.com/AchikAhmed6" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
     </div>
   </div>
   <div class="footer-bottom">
-    © 2025 Achik Ahmed. All rights reserved.
+    &copy; 2025 Achik Ahmed | Built with ❤️ in Guwahati
   </div>
 </footer>
 
