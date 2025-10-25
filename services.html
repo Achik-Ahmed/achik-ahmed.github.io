@@ -346,11 +346,27 @@
             margin-bottom: 15px;
         }
 
+        .price-container {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
         .price {
             font-size: 2rem;
             font-weight: 800;
             color: var(--primary);
-            margin: 10px 0;
+        }
+
+        .price-usd {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--muted);
+            background: rgba(37, 99, 235, 0.08);
+            padding: 4px 8px;
+            border-radius: 6px;
         }
 
         .price-period {
@@ -503,6 +519,91 @@
             font-style: italic;
         }
 
+        /* Payment Methods Section */
+        .payment-methods {
+            margin: 80px 0;
+        }
+
+        .payment-container {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .payment-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        .payment-info p {
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .advance-notice {
+            background: rgba(37, 99, 235, 0.08);
+            border-left: 4px solid var(--primary);
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+
+        .advance-notice h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .advance-notice p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .payment-methods-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: #f8fafc;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .payment-method:hover {
+            background: #f1f5f9;
+            transform: translateY(-2px);
+        }
+
+        .payment-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .payment-method span {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
         /* FAQ */
         .faq {
             margin: 80px 0;
@@ -635,6 +736,11 @@
             .card.popular {
                 transform: none;
             }
+            
+            .payment-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -681,6 +787,10 @@
             
             .benefit-icon {
                 align-self: center;
+            }
+            
+            .payment-methods-grid {
+                grid-template-columns: 1fr;
             }
             
             .cta-footer {
@@ -731,6 +841,15 @@
             
             .logo-text p {
                 display: none; /* Hide tagline on very small screens */
+            }
+            
+            .price-container {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .payment-container {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -790,17 +909,22 @@
                     <div class="pkg-num">1</div>
                     <h3>Starter Package</h3>
                     <div class="badge">Perfect for individuals</div>
-                    <div class="price">₹1,999</div>
+                    <div class="price-container">
+                        <div class="price">₹1,999</div>
+                        <div class="price-usd">$25 USD</div>
+                    </div>
                     <p>Single-page website with all essential features to establish your online presence quickly.</p>
                     <button class="see-btn" onclick="toggleDetails(this)">
                         <i class="fas fa-chevron-down"></i> See Details
                     </button>
                     <div class="details">
                         <ul>
+                            <li>Free domain + hosting for 1 year</li>
                             <li>1-page modern landing website</li>
                             <li>Responsive mobile-friendly layout</li>
                             <li>Basic SEO setup and fast loading</li>
                             <li>Contact/WhatsApp integration</li>
+                            <li>3 Free revisions</li>
                             <li>Delivery within 2–3 days</li>
                         </ul>
                     </div>
@@ -813,17 +937,22 @@
                     <div class="pkg-num">2</div>
                     <h3>Business Package</h3>
                     <div class="badge">Most Popular</div>
-                    <div class="price">₹4,999</div>
+                    <div class="price-container">
+                        <div class="price">₹4,999</div>
+                        <div class="price-usd">$60 USD</div>
+                    </div>
                     <p>Complete business website with multiple pages and advanced features to grow your business.</p>
                     <button class="see-btn" onclick="toggleDetails(this)">
                         <i class="fas fa-chevron-down"></i> See Details
                     </button>
                     <div class="details">
                         <ul>
+                            <li>Free domain + hosting for 1 year</li>
                             <li>Pages: Home, About, Services, Gallery, Contact</li>
                             <li>Rank Math SEO plugin configured</li>
                             <li>Custom business email (e.g. info@yourdomain)</li>
                             <li>Google Maps integration</li>
+                            <li>5 Free rivisions</li>
                             <li>Delivery within 4–6 days</li>
                         </ul>
                     </div>
@@ -836,18 +965,24 @@
                     <div class="pkg-num">3</div>
                     <h3>Premium Package</h3>
                     <div class="badge">E-commerce Ready</div>
-                    <div class="price">₹8,999</div>
+                    <div class="price-container">
+                        <div class="price">₹8,999</div>
+                        <div class="price-usd">$100 USD</div>
+                    </div>
                     <p>Full-featured online store with payment integration to start selling your products online.</p>
                     <button class="see-btn" onclick="toggleDetails(this)">
                         <i class="fas fa-chevron-down"></i> See Details
                     </button>
                     <div class="details">
                         <ul>
+                            <li>Free domain + hosting for 1 year</li>
                             <li>Fully functional online store setup</li>
                             <li>Up to 10 products added</li>
                             <li>Payment gateway (Razorpay/PayPal)</li>
                             <li>WhatsApp order chat integration</li>
                             <li>Speed and SEO optimization</li>
+                            <li>10 Free revisions</li>
+                            <li>Delivery within 6-7 days</li>
                         </ul>
                     </div>
                     <a href="https://wa.me/918822535788?text=Hi%20I%20want%20the%20Premium%20package." class="btn">
@@ -923,6 +1058,66 @@
             </div>
         </section>
 
+        <!-- New Payment Methods Section -->
+        <section class="payment-methods">
+            <div class="section-title fade-up">
+                <h2>Available Payment Methods</h2>
+                <p>Flexible payment options for clients worldwide</p>
+            </div>
+            <div class="payment-container fade-up">
+                <div class="payment-info">
+                    <h3>Easy & Secure Payments</h3>
+                    <p>We offer multiple payment options to make it convenient for clients from India and around the world to get their websites started quickly.</p>
+                    
+                    <div class="advance-notice">
+                        <h4>Advance Payment Required</h4>
+                        <p>We require a minimum 20% advance payment to start work on your project. This helps us reserve your spot in our workflow and begin the design process immediately.</p>
+                    </div>
+                    
+                    <p>Balance payment is due upon project completion before the final website delivery. We accept both one-time payments and installment options for larger projects.</p>
+                </div>
+                
+                <div class="payment-methods-grid">
+                    <div class="payment-method">
+                        <div class="payment-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <span>Bank Transfer</span>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">
+                            <i class="fab fa-paypal"></i>
+                        </div>
+                        <span>PayPal</span>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <span>UPI</span>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <span>Paytm / GPay</span>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <span>Credit/Debit Card</span>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <span>Cash (Local)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="faq">
             <div class="section-title fade-up">
                 <h2>Frequently Asked Questions</h2>
@@ -939,7 +1134,7 @@
                 </details>
                 <details class="fade-up">
                     <summary>What payment methods do you accept?</summary>
-                    <div>We accept UPI, Paytm, Google Pay, or bank transfer. We require a 50% advance to start the work.</div>
+                    <div>We accept UPI, Paytm, Google Pay, or bank transfer for INR payments, and PayPal for USD payments. We require a 20% advance to start the work.</div>
                 </details>
                 <details class="fade-up">
                     <summary>Do you provide support after the website is delivered?</summary>
